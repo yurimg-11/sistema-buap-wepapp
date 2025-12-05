@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="icon-close">
+    <button class="btn" (click)="cerrar_modal()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
+  <div class="body-modal">
+    <h1 class="title-modal">Eliminar materia</h1>
+
+    <span class="descripcion">
+      Estás a punto de eliminar la materia
+      <strong>{{ data.nombre_materia }}</strong> (NRC {{ data.nrc }}).
+      Una vez que la elimines no podrás deshacer esta acción.
+    </span>
+
+    <div class="buttons-modal">
+      <button mat-button class="btn-regresar" (click)="cerrar_modal()">
+        Cancelar
+      </button>
+      <button mat-button class="btn-eliminar" (click)="eliminarMateria()">
+        Eliminar
+      </button>
+    </div>
+  </div>
+</div>

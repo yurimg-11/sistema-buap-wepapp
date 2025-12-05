@@ -1,0 +1,106 @@
+.wrapper {
+  width: 100%;
+  min-height: calc(100vh - 64px); // ajusta si tu navbar es de otra altura
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem;
+  box-sizing: border-box;
+
+  background-image: url('/assets/images/carousel_1.jpeg');; // usa la MISMA ruta que en el registro de usuario
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-registro-materias {
+  width: 100%;
+  max-width: 900px;
+}
+
+mat-card {
+  width: 100%;
+}
+
+mat-card-header {
+  margin-bottom: 0.5rem;
+
+  mat-card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  mat-card-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Inputs generales */
+.mat-input {
+  width: 100%;
+}
+
+/* Fila de horario (hora inicio / hora fin) */
+.horario-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .mat-input {
+    flex: 1 1 200px;
+  }
+}
+
+/* Días de la semana */
+.dias-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+
+  label {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .dias-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+/* Mensajes de error */
+.invalid-feedback {
+  color: #d32f2f; // rojo estilo material
+  font-size: 0.8rem;
+  margin-top: -0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Botones */
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1rem 0 0.25rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 1rem;
+  }
+
+  .section-registro-materias {
+    max-width: 100%;
+  }
+}
